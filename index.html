@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieLand</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/custom.css" />
+    <script src="./scripts/index.js" defer type="module"></script>
+  </head>
+  <body>
+    <header
+      class="header w-[90%] mx-auto flex justify-between items-center mt-4 text-white"
+    >
+      <div
+        class="hero__bg fixed top-0 bottom-0 right-0 left-0 -z-10 bg-cover bg-center"
+      ></div>
+      <p class="logo cursor-pointer text-3xl font-bold">
+        <a href="/index.html">MovieLand</a>
+      </p>
+      <nav class="nav">
+        <ul class="links flex gap-4">
+          <li data-name="movie" class="links__link-movies cursor-pointer">
+            Movies
+          </li>
+          <li data-name="tv" class="links__link-series cursor-pointer">
+            Series
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main w-[90%] mx-auto mt-56 text-white">
+      <h1 class="text-white font-bold text-4xl">
+        One stop for all the movie lovers
+      </h1>
+      <div class="search mt-6 w-[350px]">
+        <div
+          class="search__movie px-3 py-3 rounded-sm mb-3 flex items-center bg-orange-400"
+        >
+          <input
+            type="text"
+            name="movie"
+            placeholder="Enter the movie name to search..."
+            class="ip__movie w-[90%] focus:outline-none text-lg"
+          />
+          <button class="btn__movie" data-name="movie">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-search cursor-pointer"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="search__series w-full px-3 py-3 rounded-sm mb-3 flex items-center bg-orange-400"
+        >
+          <input
+            type="text"
+            name="series"
+            placeholder="Enter the series name to search..."
+            class="ip__series w-[90%] focus:outline-none text-lg"
+          />
+          <button class="btn__series" data-name="tv">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-search cursor-pointer"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
