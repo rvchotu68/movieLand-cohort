@@ -24,3 +24,43 @@
     #2d040c
   );
 }
+
+/* Spinner */
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 3px solid;
+  border-color: #000;
+  border-radius: 50%;
+  border-left: 3px solid #270c26;
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  animation-name: spinner;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DEtails.html */
+
+.details__bg {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #1c1330,
+    #270c26,
+    #2c061b,
+    #2d040c
+  );
+}

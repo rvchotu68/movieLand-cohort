@@ -6,7 +6,71 @@
     <title>Details</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/custom.css" />
-    <script src="scripts/details.js" defer></script>
+    <script src="scripts/details.js" defer type="module"></script>
   </head>
-  <body></body>
+  <body class="details__bg bg-center bg-cover bg-no-repeat min-h-screen">
+    <header
+      class="header w-[90%] mx-auto flex justify-between items-center mt-4 text-white"
+    >
+      <p class="logo cursor-pointer text-3xl font-bold">
+        <a href="/index.html">MovieLand</a>
+      </p>
+      <nav class="nav">
+        <ul class="links flex gap-4">
+          <li data-name="movie" class="links__link-movies cursor-pointer">
+            Movies
+          </li>
+          <li data-name="tv" class="links__link-series cursor-pointer">
+            Series
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="w-[60%] mx-auto">
+      <section
+        class="details border mt-32 h-[500px] bg-linear-to-t from-gray-400 via-transparent to-transparent rounded-md relative"
+      >
+        <video class="absolute w-full h-full rounded-md -z-10"></video>
+        <div class="btns">
+          <div class="left">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-play-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"
+                />
+              </svg>
+              Play
+            </button>
+          </div>
+          <div class="right">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-volume-mute-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

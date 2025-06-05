@@ -1,4 +1,5 @@
 import { updateMovies } from "./storage.js";
+import { toggleLoader } from "./utility.js";
 
 const SERVER_URL =
   "https://api.themoviedb.org/3/discover/${type}?page=${pgno}&include_video=true";
@@ -20,6 +21,7 @@ const options = {
 };
 
 export const fetchList = async (type) => {
+  toggleLoader();
   let pn = type === "movie" ? server.movie_pg : server.tv_pg;
 
   let url = SERVER_URL.replace(/\${pgno}/, pn);
@@ -32,5 +34,6 @@ export const fetchList = async (type) => {
   if (type === "movie") server.movie_pg = server.movie_pg + 1;
   else server.tv_pg = server.tv_pg + 1;
   data.type = type;
+  toggleLoader();
   return data;
 };

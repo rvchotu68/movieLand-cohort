@@ -1,4 +1,4 @@
-import { seriesIP, movieIP, listContainer } from "./imports.js";
+import { seriesIP, movieIP, listContainer, spinner } from "./imports.js";
 import { fetchList } from "./server.js";
 
 export const handleNavClick = (e) => {
@@ -39,6 +39,10 @@ export const handleListClick = (e) => {
   params.set("id", e.currentTarget.id);
   const url = "/details.html";
   window.location.href = `${url}?${params.toString()}`;
+};
+
+export const toggleLoader = () => {
+  spinner.classList.toggle("hidden");
 };
 
 const renderCard = (data, type) => {
